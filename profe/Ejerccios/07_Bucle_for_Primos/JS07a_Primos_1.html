@@ -1,0 +1,92 @@
+﻿<!DOCTYPE HTML>
+<html lang="es">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Números primos - JavaScript</title>
+    <meta name="description" content="Ejercicios de JavaScript">
+    <meta name="author" content="Alejandro">
+    <link rel="shortcut icon" href="fav_icon.png">
+    <link rel="stylesheet" href="javascript_001.css">
+    <script>
+
+        // Lista de primos menores que 100
+        // Código en un solo for
+
+        function main_1() {
+            var numero, j, esPrimo;
+            for (numero = 2; numero <= 100; numero++) {
+                esPrimo = true;
+                for (j = 2; j < numero; j++) {
+                    if (numero % j == 0) {
+                        esPrimo = false;
+                        break;
+                    }
+                } // fin del for interno
+                if (esPrimo) {
+                    document.write(numero);
+                    document.write('<br>');
+                }
+            } // fin del for externo
+        }
+
+        // Lista de primos menores que 100
+        // Código en dos funciones "independientes":
+
+
+        function main_2() {
+            function esPrimo(numero) {
+                esPri = true;
+                for (var j = 2; j < numero; j++) {
+                    if (numero % j == 0) {
+                        esPri = false;
+                        break;
+                    }
+                } // fin del for interno
+                return esPri;
+            }
+
+            for (var numero = 2; numero <= 100; numero++) {                
+                if(esPrimo(numero)) {
+                    document.write(numero);
+                    document.write('<br>');
+                }
+            } // fin del for externo
+
+        }
+    </script>
+    
+</head>
+
+
+  	
+
+ <body>
+ <!--body  onload="alert('Página cargada - OK');"-->
+ 
+  	<header>
+  	<h1>Los números primos entre 1 y 100
+    </h1>
+	</header>
+  	<aside>
+  		<noscript>
+   	 		<p>
+     			<em>Si lees este mensaje es que tu navegador no 
+					ejecuta guiones JavaScript</em>
+    		</p>
+  		</noscript>
+	</aside>
+	<article>
+			<script>
+                main_1()
+                //main_2() // Lo mismo en  varias funciones
+            </script>
+	</article>
+	<footer>
+		<p>
+			&copy; Copyright  by Alejandro L. Cerezo
+		</p>
+	</footer>
+ </body>
+
+</html>

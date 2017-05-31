@@ -1,0 +1,58 @@
+﻿<!DOCTYPE HTML>
+<html lang="es">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Fibonacci - JavaScript_001</title>
+    <meta name="description" content="Ejercicios de JavaScript">
+    <meta name="author" content="Alejandro">
+    <link rel="shortcut icon" href="fav_icon.png">
+    <link rel="stylesheet" href="javascript_001.css">
+</head>
+
+
+  	
+
+ <body>
+ <!--body  onload="alert('Página cargada - OK');"-->
+ 
+  	<header>
+  	<h1>La sucesión (o serie) de Fibonacci
+    </h1>
+	</header>
+  	<aside>
+  		<noscript>
+   	 		<p>
+     			<em>Si lees este mensaje es que tu navegador no 
+					ejecuta guiones JavaScript</em>
+    		</p>
+  		</noscript>
+	</aside>
+	<article>
+			<script>
+				//<!--
+				var i=0, j=1, nMaximo=0;
+				nMaximo = parseInt(prompt("¿Qué posible valor máximo quieres?"));
+				document.write(i);
+				document.write("<br>");
+				document.write(j);
+				document.write("<br>");
+				do {
+					j = j + i;
+				    i = j - i // recuperamos en i el anterior valor de j
+					document.write(j);
+					document.write("<br>");
+				} while ((j+i) <= nMaximo);
+				
+
+				//-->
+			</script>
+	</article>
+	<footer>
+		<p>
+			&copy; Copyright  by Alejandro L. Cerezo
+		</p>
+	</footer>
+ </body>
+
+</html>

@@ -1,0 +1,92 @@
+﻿<!DOCTYPE HTML>
+<html lang="es">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Fibonacci - JavaScript_001</title>
+    <meta name="description" content="Ejercicios de JavaScript">
+    <meta name="author" content="Alejandro">
+    <link rel="shortcut icon" href="fav_icon.png">
+    <link rel="stylesheet" href="javascript_001.css">
+    <style>
+        table {
+            width: 30%;
+            text-align:center;
+        }
+    </style>
+	<script>
+
+        // Ejemplo del cálculo de la serie de Fibbonacci
+        // separando el cálculo que se guarda en un array
+        // y la salida por pantalla, que recorre el array creando una lista <ul>
+
+        const Q1 = 'Valor máximo de la serie'
+        // Cuestión para el prompt
+
+        const TITLE = "<p><b>Serie de Fibbonacci</b> hasta un máximo de "
+        // Parte fija del titulo en la salida de datos
+
+        function serieFibonacci (nMax, mostrar) {
+            var i = 0, j = 1, aSerie = [];
+            nMax = parseInt(nMax);
+            aSerie[aSerie.length] = i;
+            aSerie[aSerie.length] = j;
+            do {
+                j = j + i;
+                i = j - i;  // Recuperamos el anterior valor de j
+                aSerie[aSerie.length] = j;
+            } while ((j + i) <= nMax);
+            mostrar (nMax, aSerie)
+        }
+		
+        function mostrarFiboLista(nMax, aSerie) {
+            document.write(TITLE + nMax + "</p><ul>");
+			for (var i = 0; i < aSerie.length; i++) {
+			    document.write("<li>" + aSerie[i] + "</li>");
+			}
+			document.write("</ul>");
+        }
+
+        function mostrarFiboTabla(nMax, aSerie) {
+            document.write(TITLE + nMax + "</p><table>");
+            for (var i = 0; i < aSerie.length; i++) {
+                document.write("<tr><td>" + aSerie[i] + "</td></tr>");
+            }
+            document.write("</table>");
+        }
+		</script>
+</head>
+
+
+  	
+
+ <body>
+ <!--body  onload="alert('Página cargada - OK');"-->
+ 
+  	<header>
+  	<h1>La sucesión (o serie) de Fibonacci
+    </h1>
+	</header>
+  	<aside>
+  		<noscript>
+   	 		<p>
+     			<em>Si lees este mensaje es que tu navegador no 
+					ejecuta guiones JavaScript</em>
+    		</p>
+  		</noscript>
+	</aside>
+	<article>
+		<script>
+            
+            //serieFibonacci(prompt(Q1), mostrarFiboLista);
+            serieFibonacci(prompt(Q1), mostrarFiboTabla);
+		</script>		
+	</article>
+	<footer>
+		<p>
+			&copy; Copyright  by Alejandro L. Cerezo
+		</p>
+	</footer>
+ </body>
+
+</html>

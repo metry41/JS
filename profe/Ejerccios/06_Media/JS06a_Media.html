@@ -1,0 +1,44 @@
+﻿<!DOCTYPE HTML>
+<html lang="es">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Cálculo de la media - JS</title>
+    <meta name="description" content="Ejercicios de JavaScript">
+    <meta name="author" content="Alejandro">
+    <link rel="shortcut icon" href="fav_icon.png">
+    <link rel="stylesheet" href="javascript_001.css">
+	<script>
+		function media () {
+			var r = 0;
+			for (var i=0, max = arguments.length; i < max; i++){
+				r += arguments[i];
+			}
+			return r/max;
+		}
+					
+	</script>
+
+</head>
+
+ <body>
+  
+  	<header>
+  		<h1>Cálculo de la media</h1>
+	</header>
+	<article>
+		<script>
+			document.write("<p>Partiendo de los valores 12, 32, 45, 23, 12, 45, 34, 23</p>");
+			document.write('<p>La media es ' + media(12,32,45,23,12,45,34,23) + '</p>');
+			document.write("<p>Partiendo de los valores 12, 32, 45, 23, 12, 45, 34, 23, 16, 15, 46, 78</p>");
+			document.write('<p>La media es ' + media(12,32,45,23,12,45,34,23,16,15,46,78) + '</p>');
+		</script>
+	</article>
+	<footer>
+		<p>
+			&copy; Copyright  by Alejandro L. Cerezo
+		</p>
+	</footer>
+ </body>
+
+</html>

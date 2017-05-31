@@ -1,0 +1,65 @@
+﻿<!DOCTYPE HTML>
+<html lang="es">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Fibonacci - JavaScript_001</title>
+    <meta name="description" content="Ejercicios de JavaScript">
+    <meta name="author" content="Alejandro">
+    <link rel="shortcut icon" href="fav_icon.png">
+    <link rel="stylesheet" href="javascript_001.css">
+	<script>
+
+        // Ejemplo del cálculo de la serie de Fibbonacci
+        // sin separar el cálculo y la salida por pantalla
+
+		function serieFibonacci (nMax) {
+		    var i = 0, j = 1;
+		    nMax = parseInt(nMax);
+		    document.write("<p><b>Serie de Fibbonacci</b> hasta un máximo de " + nMax + "</p><ul>");
+			document.write("<li>" + i + "</li>");
+			document.write("<li>" + j + "</li>");
+			do {
+				j = j + i;
+				i = j - i;  // Recuperamos el anterior valor de j
+				document.write("<li>" + j + "</li>");
+			} while ((j + i) <= nMax);
+			document.write("</ul>");
+		}
+
+		</script>
+</head>
+
+
+  	
+
+ <body>
+ <!--body  onload="alert('Página cargada - OK');"-->
+ 
+  	<header>
+  	<h1>La sucesión (o serie) de Fibonacci
+    </h1>
+	</header>
+  	<aside>
+  		<noscript>
+   	 		<p>
+     			<em>Si lees este mensaje es que tu navegador no 
+					ejecuta guiones JavaScript</em>
+    		</p>
+  		</noscript>
+	</aside>
+	<article>
+		<script>
+            serieFibonacci(prompt('valor máximo de la serie'));
+			//var nMaximo = prompt('valor máximo de la serie');
+			//serieFibonacci(nMaximo);
+		</script>		
+	</article>
+	<footer>
+		<p>
+			&copy; Copyright  by Alejandro L. Cerezo
+		</p>
+	</footer>
+ </body>
+
+</html>

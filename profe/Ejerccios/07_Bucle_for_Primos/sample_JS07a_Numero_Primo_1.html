@@ -1,0 +1,71 @@
+﻿<!DOCTYPE HTML>
+<html lang="es">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Números primos - JavaScript_001</title>
+    <meta name="description" content="Ejemplos de JavaScript">
+    <meta name="author" content="Alejandro">
+    <link rel="shortcut icon" href="fav_icon.png">
+    <link rel="stylesheet" href="javascript_001.css">
+    <script>
+        function esPrimo(userNumero, aDivisores) {
+            var esPrimo = true;
+            for (var j = 2; j < userNumero; j++) {
+                if (userNumero % j == 0) {
+                    esPrimo = false;
+                    aDivisores[aDivisores.length] = j;
+                    // break;
+                } // Fin del if
+            } // Fin del for
+            return esPrimo;
+        } // Fin de la función
+
+        function  muestraDatos(userNumero, aDivisores, esPrimo) {
+            document.write(esPrimo ? ("El número " + userNumero + " es primo") : ("El número " + userNumero + " no es primo")) ;
+				
+            if (!esPrimo){
+                document.write("<ul>" );
+                for (i=0; i<aDivisores.length; i++){
+                    document.write("<li>" + aDivisores[i] + "</li>");
+                } // Fin del for
+                document.write("</ul>");
+					
+                //document.write("<p>" + aDivisores + "</p>");
+            } // Fin del if
+        } // Fin de la función
+    </script>
+ </head>
+
+
+  	
+
+ <body>
+ <!--body  onload="alert('Página cargada - OK');"-->
+ 
+  	<header>
+  	<h1>Cáculo de números primos
+    </h1>
+	</header>
+  	<aside>
+  		<noscript>
+   	 		<p>
+     			<em>Si lees este mensaje es que tu navegador no 
+					ejecuta guiones JavaScript</em>
+    		</p>
+  		</noscript>
+	</aside>
+	<article>
+			<script>
+                var  userNumero = parseInt(prompt("Dime un número entero")), aDivisores = [];
+                muestraDatos(userNumero, aDivisores, esPrimo(userNumero, aDivisores));
+			</script>
+	</article>
+	<footer>
+		<p>
+			&copy; Copyright  by Alejandro L. Cerezo
+		</p>
+	</footer>
+ </body>
+
+</html>

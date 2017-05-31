@@ -1,0 +1,37 @@
+﻿<!DOCTYPE HTML>
+<html lang="es">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Excepciones</title>
+    <meta name="description" content="Ejercicios del Curso Web">
+    <meta name="author" content="Alejandro">
+    <link rel="shortcut icon" href="fav_icon.png">
+    <link rel="stylesheet" href="default.css">
+</head>
+
+ <body>
+  
+  	<header>
+  		<h1>Excepciones</h1>
+	</header>
+	<article>
+		<p>Texto</p>
+		<script type="text/javascript">
+			try   { 
+				var x =	noExiste();
+			 }			
+			catch(err)   {
+			    document.write("Error: " + err + ".");
+			    console.dir(err);
+			  }
+		</script>
+	</article>
+	<footer>
+		<p>
+			&copy; Copyright  by Alejandro L. Cerezo
+		</p>
+	</footer>
+ </body>
+
+</html>

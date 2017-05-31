@@ -1,0 +1,98 @@
+﻿<!DOCTYPE HTML>
+<html lang="es">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Factoriales - JavaScript_008</title>
+    <meta name="description" content="Ejercicios de JavaScript">
+    <meta name="author" content="Alejandro">
+    <link rel="shortcut icon" href="fav_icon.png">
+    <link rel="stylesheet" href="javascript_001.css">
+	<script>
+        function main_1() {
+
+            // Ejemplo del cálculo de un factorial con un for progresivo (cuenta adelante)
+
+            const Q1 = "Introduce un número y se mostrará su factorial"
+            //Texto del prompt
+
+            function selecOperacion(num) {
+                // Si el valor introducido no es un número o es negativo (< 0), no se puede calcular el factorial.
+                if (parseInt(num) != num || num < 0) {
+                    document.write("El factorial del valor seleccionado no existe");
+                    return -1;
+                }
+                // si no se ha entrado en el if
+                document.write("El factorial de " + num + " es " + factorial(num));
+            }
+            function factorial(numero) {
+                var resultado = 1;
+                for (var i = 1; i <= numero; i++) {
+                    resultado *= i;
+                }
+                return resultado;
+            }
+            selecOperacion(prompt(Q1));
+        } // Fin de la función main_1()
+
+        function main_2() {
+
+            // Ejemplo del cálculo de un factorial con un for regresivo (cuent atrás)
+
+            const Q1 = "Introduce un número y se mostrará su factorial"
+            //Texto del prompt
+
+            function selecOperacion(num) {
+                // Si el valor introducido no es un número o es negativo (< 0), no se puede calcular el factorial.
+                if (parseInt(num) != num || num < 0) {
+                    document.write("El factorial del valor seleccionado no existe");
+                    return -1;
+                }
+                // si no se ha entrado en el if
+                document.write("El factorial de " + num + " es " + factorial(num));
+            }
+
+            function factorial(numero) {
+                var resultado = 1;
+                for (var i = numero; i; i--) {
+                    resultado *= i;
+                }
+                return resultado;
+            }
+            selecOperacion(prompt(Q1));
+
+        }
+	</script>
+</head>
+
+ <body>
+ <!--body  onload="alert('Página cargada - OK');"-->
+ 
+  	<header>
+  	<h1>Cálculo del factorial de un número
+    </h1>
+	</header>
+  	<aside>
+  		<noscript>
+   	 		<p>
+     			<em>Si lees este mensaje es que tu navegador no 
+					ejecuta guiones JavaScript</em>
+    		</p>
+  		</noscript>
+	</aside>
+	<article>
+
+        <button onclick=main_1()>Ascendente</button>
+        <button onclick=main_2()>Decendente</button>
+
+		<script>
+		</script>
+  	</article>
+	<footer>
+		<p>
+			&copy; Copyright  by Alejandro L. Cerezo
+		</p>
+	</footer>
+ </body>
+
+</html>

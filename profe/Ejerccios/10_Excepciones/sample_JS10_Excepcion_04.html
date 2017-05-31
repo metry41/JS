@@ -1,0 +1,50 @@
+﻿<!DOCTYPE HTML>
+<html lang="es">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Excepciones</title>
+    <meta name="description" content="Ejercicios del Curso Web">
+    <meta name="author" content="Alejandro">
+    <link rel="shortcut icon" href="fav_icon.png">
+    <link rel="stylesheet" href="default.css">
+    <script>
+        function comprobarNumero(x) {
+            if (x == "") throw "campo vacio";
+            else if (isNaN(x)) throw "no es un número";
+            else if (x > 10) throw "valor demasiado alto";
+            else if (x < 5) throw "valor demasiado bajo";
+            return x;
+        }
+
+        function main() {
+            var num;
+            try {
+                num = comprobarNumero(prompt("Escribe un número entre 6 y 10"))
+            }
+            catch (err) {
+                document.write("Error: " + err + ".");
+                return;
+            }
+            document.write("Escribiste un número válido: <b>" + num + "</b>");
+        }
+    </script>
+</head>
+
+ <body>
+  
+  	<header>
+  		<h1>Excepciones</h1>
+	</header>
+	<article>
+		<p>Texto</p>
+		<script>main()</script>
+	</article>
+	<footer>
+		<p>
+			&copy; Copyright  by Alejandro L. Cerezo
+		</p>
+	</footer>
+ </body>
+
+</html>

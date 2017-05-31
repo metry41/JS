@@ -1,0 +1,46 @@
+﻿<!DOCTYPE HTML>
+<html lang="es">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Pares / Nones - JavaScript_001</title>
+    <meta name="description" content="Ejercicios de JavaScript">
+    <meta name="author" content="Alejandro">
+    <link rel="shortcut icon" href="fav_icon.png">
+    <link rel="stylesheet" href="javascript_001.css">
+</head>
+
+ <body>
+ <!--body  onload="alert('Página cargada - OK');"-->
+ 
+  	<header>
+  	<h1>Números pares o impares
+    </h1>
+	</header>
+  	<aside>
+  		<noscript>
+   	 		<p>
+     			<em>Si lees este mensaje es que tu navegador no 
+					ejecuta guiones JavaScript</em>
+    		</p>
+  		</noscript>
+	</aside>
+	<article>
+		<script>
+   			//<!--
+			var numero = prompt("Introduce un número entero");
+ 			if (isNaN(numero/2)) document.write("Eso no es un número");
+ 			else if (numero == 0) document.write("El " + numero + " según algunos no es ni par ni impar<br>Para otros matemáticos es un par");
+ 			else if (numero % 2) document.write("El " + numero + " es un número impar");
+			else document.write("El " + numero + " es un número par");
+			//-->
+        </script>
+	</article>
+	<footer>
+		<p>
+			&copy; Copyright  by Alejandro L. Cerezo
+		</p>
+	</footer>
+ </body>
+
+</html>

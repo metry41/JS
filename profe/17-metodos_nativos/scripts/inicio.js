@@ -33,3 +33,22 @@ console.log(String.fromCharCode(67));
 
 console.log(aPalabras)
 console.log(newCadena)
+
+let n = Math.random()*10;
+console.log(n)
+console.log(Math.ceil(n))
+console.log(Math.round(n))
+console.log(Math.floor(n))
+
+
+let aPoints = [40, 100, 1, 5, 25, 10];
+let aPointCopia =  []
+
+for (var i = 0; i < aPoints.length; i++) {
+    aPointCopia [i] = aPoints[i];
+    
+}
+
+aPoints.sort(function(a, b){return b-a})
+console.log(aPoints)
+console.log(aPointCopia)

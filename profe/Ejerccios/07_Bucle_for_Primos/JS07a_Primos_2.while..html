@@ -1,0 +1,50 @@
+﻿<!DOCTYPE HTML>
+<html lang="es">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Números primos - JavaScript</title>
+    <meta name="description" content="Ejercicios de JavaScript">
+    <meta name="author" content="Alejandro">
+    <link rel="shortcut icon" href="fav_icon.png">
+    <link rel="stylesheet" href="javascript_001.css">
+</head>
+ <body>
+ <!--body  onload="alert('Página cargada - OK');"-->
+  	<header>
+      	<h1>Los números primos entre 1 y 100
+    </h1>
+	</header>
+  	<aside>
+  		<noscript>
+   	 		<p>
+     			<em>Si lees este mensaje es que tu navegador no 
+					ejecuta guiones JavaScript</em>
+    		</p>
+  		</noscript>
+	</aside>
+	<article>
+			<script>
+                // En lugar de anidar un for, el segundo for se sustituye por un while 
+				var i, j, primo;
+				for ( i = 2; i <= 100; i++) {
+				    primo = true;
+				    j = 2
+				    while (j < i && primo) {
+				        primo = (i % j++ == 0 ? false : primo);
+					}
+					if (primo) {
+						document.write(i);
+						document.write('<br>');
+					}
+				}
+			</script>
+	</article>
+	<footer>
+		<p>
+			&copy; Copyright  by Alejandro L. Cerezo
+		</p>
+	</footer>
+ </body>
+
+</html>

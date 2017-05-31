@@ -1,0 +1,71 @@
+﻿<!DOCTYPE HTML>
+<html lang="es">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Fibonacci - JavaScript_001</title>
+    <meta name="description" content="Ejercicios de JavaScript">
+    <meta name="author" content="Alejandro">
+    <link rel="shortcut icon" href="fav_icon.png">
+    <link rel="stylesheet" href="javascript_001.css">
+</head>
+ <body>
+ <!--body  onload="alert('Página cargada - OK');"-->
+ 
+  	<header>
+  	<h1>La sucesión (o serie) de Fibonacci
+    </h1>
+	</header>
+  	<aside>
+  		<noscript>
+   	 		<p>
+     			<em>Si lees este mensaje es que tu navegador no 
+					ejecuta guiones JavaScript</em>
+    		</p>
+  		</noscript>
+	</aside>
+	<article>
+		<form>
+		<p>posible valor máximo de la serie <input type="text" name="nMaximo" id="nMaximo" value="1000000"></p>	
+		<p><input type="button" value="Obtener serie" onclick="serieFibonacci()">
+		</form>		
+	</article>
+	<footer>
+		<p>
+			&copy; Copyright  by Alejandro L. Cerezo
+		</p>
+	</footer>
+     <script>
+
+         // Ejemplo del cálculo de la serie de Fibbonacci
+         // separando el cálculo que se guarda en un array
+         // y la salida por pantalla, que recorre el array creando una lista <ul>,
+         // al que se ha incorporado como interfaz un input y un boton
+
+         function serieFibonacci() {
+             var i = 0, j = 1, aSerie = [];
+             nMax = parseInt(document.getElementById("nMaximo").value);
+             aSerie[aSerie.length] = i;
+             aSerie[aSerie.length] = j;
+             do {
+                 j = j + i;
+                 i = j - i;  // Recuperamos el anterior valor de j
+                 aSerie[aSerie.length] = j;
+             } while ((j + i) <= nMax);
+             mostrarFibonacci(nMax, aSerie)
+         }
+
+         function mostrarFibonacci(nMax, aSerie) {
+             document.write("<p><b>Serie de Fibbonacci</b> hasta un máximo de " + nMax + "</p><ul>");
+             for (var i = 0; i < aSerie.length; i++) {
+                 document.write("<li>" + aSerie[i] + "</li>");
+             }
+             document.write("</ul>");
+         }
+
+         //-->
+     </script>
+
+ </body>
+
+</html>

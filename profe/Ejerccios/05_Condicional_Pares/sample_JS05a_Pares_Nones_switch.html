@@ -1,0 +1,74 @@
+﻿<!DOCTYPE HTML>
+<html lang="es">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Pares / Nones - JavaScript_001</title>
+	<meta name="description" content="Ejercicios de JavaScript">
+	<meta name="author" content="Alejandro">
+  	<link rel="shortcut icon" href="/favicon.ico">
+	<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <!--
+        <link rel="stylesheet" href="css/javascript_001.css">    
+    -->
+ 	<script>
+        function main() {
+            const Q1 = "Introduce un número entero",
+                  TEXT1 = "El número introducido es ",
+                  TEXT2 = "Eso no es un número",
+		          PAR = "<b>par</b>",
+                  IMPAR = "<b>impar</b>";
+		    function parImpar(numero) {
+		        if (isNaN(parseInt(numero)) || isNaN(numero / 2)) {
+		            return -1; // No es un número
+		        } else {
+		            return (numero % 2); 
+		            // 1 si Numero impar & 0 Numero par
+		        }
+		    } // Fin de la función parImpar
+            function muestraDatos(codigo) {
+                var cTexto;
+                switch (codigo) {
+                case 0:
+                    cTexto = TEXT1 + PAR;
+                    break;
+                case 1:
+                    cTexto = TEXT1 + IMPAR;
+                    break;
+                case -1: 
+                    cTexto = TEXT2;
+                    break;
+                }                
+                document.write(cTexto);
+            } // Fin de la función 
+            muestraDatos(parImpar(prompt(Q1)))		    
+		}
+	</script>
+</head>
+
+ <body>
+ <!--body  onload="alert('Página cargada - OK');"-->
+ 
+  	<header>
+  	<h1>Números pares o impares
+    </h1>
+	</header>
+  	<aside>
+  		<noscript>
+   	 		<p>
+     			<em>Si lees este mensaje es que tu navegador no 
+					ejecuta guiones JavaScript</em>
+    		</p>
+  		</noscript>
+	</aside>
+	<article>
+		<script>main()</script>
+	</article>
+	<footer>
+		<p>
+			&copy; Copyright  by Alejandro L. Cerezo
+		</p>
+	</footer>
+ </body>
+
+</html>

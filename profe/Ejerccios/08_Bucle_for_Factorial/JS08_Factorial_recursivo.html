@@ -1,0 +1,68 @@
+﻿<!DOCTYPE HTML>
+<html lang="es">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Factoriales - JavaScript_008</title>
+    <meta name="description" content="Ejercicios de JavaScript">
+    <meta name="author" content="Alejandro">
+    <link rel="shortcut icon" href="fav_icon.png">
+    <link rel="stylesheet" href="javascript_001.css">
+  	<script>
+
+        //Ejemplo del cálculo recursivo de un factorial
+
+        function selecOperacion(num) {
+            // Si el valor introducido no es un número o es negativo (< 0), no se puede calcular el factorial.
+            if (parseInt(num) != num || num < 0) {
+                document.write("El factorial del valor seleccionado no existe");
+                return -1;
+            }
+            // si no se ha entrado en el if
+            document.write("El factorial de " + num + " es " + factorial(num));
+        }
+        
+  		function factorial(num)
+		{
+		    // Si el número es 0, su factorial es 1 y se interrumpe la recursividad.
+		    if (num == 0) {
+		        return 1;
+		    }
+  		    // para cualquier otro valor, se sigue el procedimiento recursivo
+  		    // basado en el principio de que n! = n * (n-1)!.
+		    else {
+		        return (num * factorial(num - 1));
+		    }
+		}  		
+  	</script>
+  	
+</head>
+
+ <body>
+ <!--body  onload="alert('Página cargada - OK');"-->
+ 
+  	<header>
+  	<h1>Cálculo recursivo del factorial de un número
+    </h1>
+	</header>
+  	<aside>
+  		<noscript>
+   	 		<p>
+     			<em>Si lees este mensaje es que tu navegador no 
+					ejecuta guiones JavaScript</em>
+    		</p>
+  		</noscript>
+	</aside>
+	<article>
+ 		<script>
+           selecOperacion(prompt("Introduce un número y se mostrará su factorial"));
+        </script>
+  	</article>
+	<footer>
+		<p>
+			&copy; Copyright  by Alejandro L. Cerezo
+		</p>
+	</footer>
+ </body>
+
+</html>

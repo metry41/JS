@@ -1,0 +1,67 @@
+﻿<!DOCTYPE HTML>
+<html lang="es">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Factoriales - JavaScript_008</title>
+    <meta name="description" content="Ejercicios del Curso Web">
+    <meta name="author" content="Alejandro">
+    <link rel="shortcut icon" href="fav_icon.png">
+    <link rel="stylesheet" href="default.css">
+    <script>
+        function comprobar (num) {
+            if (num == "" || isNaN(num)) throw "Sólo se puede calular el factorial de un <b>número</b>"
+            else if (num != parseInt(num)) throw "Sólo se puede calular el factorial de un <b>entero</b>"
+            else if (num < 0) throw "No se peede calular el factorial de un número <b>negativo</b>"
+            else if (num > 170) throw "El factorial que solicitas es mayor que el máximo número posible (y daría <b>\"infinito\"</b>";
+            return num;
+        } // Fin de la función
+
+        function factorial(num) {
+            var resultado = 1;
+            for(var i=1; i<=num; i++) {
+                resultado *= i;
+            }
+            return resultado;
+        } // Fin de la función
+
+        function main() {
+            try{
+                var numero = comprobar(prompt("Introduce un número entero y se mostrará su factorial"));
+            }
+            catch (err) {
+                document.write("<p>" + err + "</p>");	
+                main();
+                return;
+            }
+            document.write("<p>El factorial de " + numero + " es <b>" + factorial(numero) + "</b></p>");
+        }
+
+    </script>
+
+ <body>
+ <!--body  onload="alert('Página cargada - OK');"-->
+ 
+  	<header>
+  	<h1>Cálculo del factorial de un número
+    </h1>
+	</header>
+  	<aside>
+  		<noscript>
+   	 		<p>
+     			<em>Si lees este mensaje es que tu navegador no 
+					ejecuta guiones JavaScript</em>
+    		</p>
+  		</noscript>
+	</aside>
+	<article>
+ 		<script>main();</script>
+  	</article>
+	<footer>
+		<p>
+			&copy; Copyright  by Alejandro L. Cerezo
+		</p>
+	</footer>
+ </body>
+
+</html>
